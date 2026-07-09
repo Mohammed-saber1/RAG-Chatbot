@@ -1,0 +1,29 @@
+FROM continuumio/miniconda3:latest
+
+WORKDIR /app
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Create and activate a conda environment similar to gen-venv
+RUN conda create -n gen-venv python=3.11 -y
+RUN echo "conda activate gen-venv" >> ~/.bashrc
+ENV PATH=/opt/conda/envs/gen-venv/bin:$PATH
+
+# Copy requirements and install
+COPY requirements.txt .
+# Use conda run to ensure we install into the right environment
+RUN conda run -n gen-venv pip install --no-cache-dir -r requirements.txt
+
+# Copy the application code
+COPY . .
+
+# Expose port
+EXPOSE 8000
+
+# Create persistence directories
+RUN mkdir -p uploads chroma_db
+
+# Run uvicorn server
+CMD ["conda", "run", "--no-capture-output", "-n", "gen-venv", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

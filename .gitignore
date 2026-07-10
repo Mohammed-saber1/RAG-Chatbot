@@ -1,0 +1,29 @@
+# Node
+node_modules/
+dist/
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+gen-venv/
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Database / Uploads (Cache Data)
+backend/chroma_db/
+backend/uploads/
+chroma_db/
+uploads/
+
+# OS Files
+.DS_Store
+Thumbs.db

@@ -14,9 +14,7 @@ venv/
 gen-venv/
 
 # Environment Variables
-.env
-.env.*
-!.env.example
+backend/.env
 
 # Database / Uploads (Cache Data)
 backend/chroma_db/

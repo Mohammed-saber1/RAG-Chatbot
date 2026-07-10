@@ -3,7 +3,7 @@
 RAG-Chatbot is a full-stack Retrieval-Augmented Generation (RAG) application. It allows you to upload PDF and TXT documents, embedding them locally to build a knowledge base, and then answers your questions based strictly on that context using the Mistral AI API. 
 The primary goal of this project is to create a secure, fast, and highly accurate document Q&A assistant that completely eliminates AI hallucination by forcing the LLM to rely *only* on the provided documents.
 
-https://github.com/Mohammed-saber1/RAG-Chatbot/raw/main/Demo-Video.mp4
+[Watch Demo](assets/demo.mp4)
 
 ## 🌟 Key Features
 

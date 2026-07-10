@@ -33,7 +33,7 @@ export function ChatInterface({
               <path d="M12 12l9.9 4.9"></path>
             </svg>
           </div>
-          <h1>DocQuery AI</h1>
+          <h1>RAG-Chatbot</h1>
         </div>
         <div className="chat-header-status">
           <div className="status-dot"></div>

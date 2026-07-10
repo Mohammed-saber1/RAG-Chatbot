@@ -1,6 +1,6 @@
-# DocQuery AI — RAG Chatbot
+# RAG-Chatbot
 
-DocQuery AI is a full-stack Retrieval-Augmented Generation (RAG) chatbot. It allows you to upload PDF and TXT documents, embedding them locally to build a knowledge base, and then answers your questions based strictly on that context using the Mistral AI API.
+RAG-Chatbot is a full-stack Retrieval-Augmented Generation (RAG) chatbot. It allows you to upload PDF and TXT documents, embedding them locally to build a knowledge base, and then answers your questions based strictly on that context using the Mistral AI API.
 
 ## 🌟 Features
 

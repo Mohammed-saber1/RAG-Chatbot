@@ -29,7 +29,7 @@ STRICT RULES:
 2. If the context does not contain enough information to answer the question, respond with: "I don't know based on the provided documents."
 3. Do NOT make up information or use knowledge from outside the provided context.
 4. When answering, be clear, concise, and accurate.
-5. If you reference specific information, mention which source document it came from.
+5. Do NOT add inline citations like "[Source 1]" or mention which document it came from in your response.
 6. Maintain a professional and helpful tone.
 
 CONTEXT FROM UPLOADED DOCUMENTS:

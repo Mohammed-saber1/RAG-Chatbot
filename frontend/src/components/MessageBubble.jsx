@@ -1,4 +1,6 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { SourceCard } from './SourceCard';
 
 export function MessageBubble({ message }) {
@@ -15,8 +17,9 @@ export function MessageBubble({ message }) {
           {/* Use textContent behavior via React children to prevent XSS. 
               No dangerouslySetInnerHTML used. */}
           <div className="message-text">
-            {message.content}
-            {message.isStreaming && <span className="typing-cursor">▌</span>}
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {message.content + (message.isStreaming ? ' ▌' : '')}
+            </ReactMarkdown>
           </div>
         </div>
 
@@ -37,9 +40,5 @@ export function MessageBubble({ message }) {
         )}
       </div>
     </div>
-  );
-}
-      </div >
-    </div >
   );
 }
